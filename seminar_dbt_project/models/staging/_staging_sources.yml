@@ -1,0 +1,35 @@
+version: 2
+# https://hub.getdbt.com/calogica/dbt_expectations/latest/
+# https://www.elementary-data.com/dbt-test-hub
+sources:
+  - name: public
+    tables:
+      - name: payment
+        description: this is table for detail of payment that is taken from customer
+        tags: ["finance", "transactions"]
+        columns:
+          - name: payment_id
+            description: id of payment
+            tests:
+              - unique
+              - not_null
+          - name: customer_id
+            description: id of customer
+            tests:
+              - not_null
+          - name: staff_id
+            description: id of staff
+            tests:
+              - not_null
+          - name: rental_id
+            description: id of rental
+            tests:
+              - not_null
+          - name: amount
+            description: total money of payment
+            tests:
+              - not_null
+          - name: payment_date
+            description: date of payment
+            tests:
+              - not_null

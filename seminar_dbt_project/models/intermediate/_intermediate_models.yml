@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: int_revenue_by_date
+    description: This table contains revenue of marketing day by day
+  - name: int_customers_per_store
+    description: This table contains customers that is of each store
+    columns:
+      - name: store_id
+        description: This is a unique identifier for the store
+        tests:
+          - unique
+          - not_null
+      - name: total_customers
+        description: This is a unique identifier for the store
+        tests:
+          - not_null
+          - unique

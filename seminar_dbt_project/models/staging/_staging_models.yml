@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: stg_payment
+    description: "Staging model consisting of payment events"
+    columns:
+      - name: payment_id
+        description: "This is id of payment"
+        tests:
+          - unique
+          - not_null
+      - name: customer_id
+        tests:
+          - not_null
+
+sources:
+  - name: your_source_name
+    description: "This is a description of your source."
+    tables:
+      - name: your_table_name
+        description: "This table contains data about..."
