@@ -1,8 +1,8 @@
 import json
 
-from constants import CATEGORIES
-from db.insert_data import insert_product
-from services.fetch_data import fetch_data_from_api
+from ..constant import CATEGORIES
+from ..db.insert_data import insert_product
+from ..services.fetch_data import fetch_data_from_api
 
 
 def fetch_total_pages(initial_data):

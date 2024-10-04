@@ -1,5 +1,5 @@
 import json
-from db.database import connect_to_db
+from ..db.database import connect_to_db
 
 
 def insert_product(product):

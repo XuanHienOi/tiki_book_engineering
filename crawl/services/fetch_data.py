@@ -1,5 +1,5 @@
 import requests
-from constants import API_URL, HEADERS
+from ..constant import API_URL, HEADERS
 
 
 def fetch_data_from_api(page, category_id):
