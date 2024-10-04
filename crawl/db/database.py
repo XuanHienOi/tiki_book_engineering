@@ -7,5 +7,5 @@ def connect_to_db(db_name='tiki_data.db'):
 
 def create_tables():
     with connect_to_db() as conn:
-        with open('sql/create_tables.sql', 'r') as f:
+        with open('/opt/airflow/dags/crawl/sql/create_tables.sql', 'r') as f:
             conn.executescript(f.read())

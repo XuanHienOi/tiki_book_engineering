@@ -1,5 +1,5 @@
-from db.database import create_tables
-from services.category_processor import process_all_categories
+from .db.database import create_tables
+from .services.category_processor import process_all_categories
 
 
 def main():
