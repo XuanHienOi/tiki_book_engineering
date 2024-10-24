@@ -1,8 +1,8 @@
 import json
 
-from ..constant import CATEGORIES
-from ..db.insert_data import insert_product
-from ..services.fetch_data import fetch_data_from_api
+from constants import BOOK_IDS, CATEGORIES
+from db.insert_data import insert_book, insert_product
+from services.fetch_data import fetch_data_by_id, fetch_data_from_api
 
 
 def fetch_total_pages(initial_data):
@@ -42,3 +42,10 @@ def process_category(category):
 def process_all_categories():
     for category in CATEGORIES:
         process_category(category)
+
+
+def process_all_book_with_id():
+    for id in BOOK_IDS:
+        print(f"Processing book with ID: {id}")
+        book = fetch_data_by_id(id)
+        insert_book(book)
