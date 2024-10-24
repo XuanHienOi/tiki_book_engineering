@@ -9,3 +9,9 @@ def create_tables():
     with connect_to_db() as conn:
         with open('/opt/airflow/dags/crawl/sql/create_tables.sql', 'r') as f:
             conn.executescript(f.read())
+
+
+def create_books_table():
+    with connect_to_db() as conn:
+        with open('sql/create_books_table.sql', 'r') as f:
+            conn.executescript(f.read())
