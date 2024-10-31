@@ -22,6 +22,9 @@ dag = DAG(
     catchup=False,
 )
 
+# Set the PYTHONPATH to include the path where the SQL file is located
+# python_path = '/opt/airflow/dags/crawl'
+
 # Define the PythonOperator
 run_crawl_task = PythonOperator(
     task_id='run_main_function',

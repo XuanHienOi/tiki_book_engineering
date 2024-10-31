@@ -1,0 +1,101 @@
+[2024-10-28T10:01:50.664+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2024-10-28T10:01:50.681+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: crawl_dag.run_main_function manual__2024-10-28T10:01:49.799937+00:00 [queued]>
+[2024-10-28T10:01:50.688+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: crawl_dag.run_main_function manual__2024-10-28T10:01:49.799937+00:00 [queued]>
+[2024-10-28T10:01:50.689+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 2
+[2024-10-28T10:01:50.701+0000] {taskinstance.py:2888} INFO - Executing <Task(PythonOperator): run_main_function> on 2024-10-28 10:01:49.799937+00:00
+[2024-10-28T10:01:50.706+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=272) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2024-10-28T10:01:50.707+0000] {standard_task_runner.py:72} INFO - Started process 280 to run task
+[2024-10-28T10:01:50.707+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'crawl_dag', 'run_main_function', 'manual__2024-10-28T10:01:49.799937+00:00', '--job-id', '15', '--raw', '--subdir', 'DAGS_FOLDER/crawl_dag.py', '--cfg-path', '/tmp/tmp5scosgxn']
+[2024-10-28T10:01:50.709+0000] {standard_task_runner.py:105} INFO - Job 15: Subtask run_main_function
+[2024-10-28T10:01:50.750+0000] {task_command.py:467} INFO - Running <TaskInstance: crawl_dag.run_main_function manual__2024-10-28T10:01:49.799937+00:00 [running]> on host 62c01eecfef1
+[2024-10-28T10:01:50.826+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='PhiNguyen' AIRFLOW_CTX_DAG_ID='crawl_dag' AIRFLOW_CTX_TASK_ID='run_main_function' AIRFLOW_CTX_EXECUTION_DATE='2024-10-28T10:01:49.799937+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-10-28T10:01:49.799937+00:00'
+[2024-10-28T10:01:50.827+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2024-10-28T10:01:50.842+0000] {logging_mixin.py:190} INFO - Processing book with ID: 42230121
+[2024-10-28T10:01:51.162+0000] {logging_mixin.py:190} INFO - Processing book with ID: 74460137
+[2024-10-28T10:01:51.596+0000] {logging_mixin.py:190} INFO - Processing book with ID: 273385286
+[2024-10-28T10:01:52.113+0000] {logging_mixin.py:190} INFO - Processing book with ID: 187827003
+[2024-10-28T10:01:52.343+0000] {logging_mixin.py:190} INFO - Processing book with ID: 263070154
+[2024-10-28T10:01:52.585+0000] {logging_mixin.py:190} INFO - Processing book with ID: 166192600
+[2024-10-28T10:01:52.824+0000] {logging_mixin.py:190} INFO - Processing book with ID: 48752755
+[2024-10-28T10:01:53.085+0000] {logging_mixin.py:190} INFO - Processing book with ID: 105663942
+[2024-10-28T10:01:53.325+0000] {logging_mixin.py:190} INFO - Processing book with ID: 381234
+[2024-10-28T10:01:53.856+0000] {logging_mixin.py:190} INFO - Processing book with ID: 48323805
+[2024-10-28T10:01:54.095+0000] {logging_mixin.py:190} INFO - Processing book with ID: 103512039
+[2024-10-28T10:01:54.336+0000] {logging_mixin.py:190} INFO - Processing book with ID: 13419678
+[2024-10-28T10:01:54.618+0000] {logging_mixin.py:190} INFO - Processing book with ID: 555504
+[2024-10-28T10:01:54.872+0000] {logging_mixin.py:190} INFO - Processing book with ID: 13833466
+[2024-10-28T10:01:55.147+0000] {logging_mixin.py:190} INFO - Processing book with ID: 71345381
+[2024-10-28T10:01:55.402+0000] {logging_mixin.py:190} INFO - Processing book with ID: 104651900
+[2024-10-28T10:01:55.930+0000] {logging_mixin.py:190} INFO - Processing book with ID: 207256575
+[2024-10-28T10:01:56.156+0000] {logging_mixin.py:190} INFO - Processing book with ID: 36363381
+[2024-10-28T10:01:56.387+0000] {logging_mixin.py:190} INFO - Processing book with ID: 75307228
+[2024-10-28T10:01:56.751+0000] {logging_mixin.py:190} INFO - Processing book with ID: 276159943
+[2024-10-28T10:01:57.280+0000] {logging_mixin.py:190} INFO - Processing book with ID: 93734071
+[2024-10-28T10:01:57.544+0000] {logging_mixin.py:190} INFO - Processing book with ID: 112588572
+[2024-10-28T10:01:57.802+0000] {logging_mixin.py:190} INFO - Processing book with ID: 71322822
+[2024-10-28T10:01:58.048+0000] {logging_mixin.py:190} INFO - Processing book with ID: 10244169
+[2024-10-28T10:01:58.302+0000] {logging_mixin.py:190} INFO - Processing book with ID: 148760924
+[2024-10-28T10:01:58.875+0000] {logging_mixin.py:190} INFO - Processing book with ID: 270529639
+[2024-10-28T10:01:59.119+0000] {logging_mixin.py:190} INFO - Processing book with ID: 275101757
+[2024-10-28T10:01:59.386+0000] {logging_mixin.py:190} INFO - Processing book with ID: 262977989
+[2024-10-28T10:01:59.643+0000] {logging_mixin.py:190} INFO - Processing book with ID: 272000024
+[2024-10-28T10:01:59.893+0000] {logging_mixin.py:190} INFO - Processing book with ID: 273819808
+[2024-10-28T10:02:00.513+0000] {logging_mixin.py:190} INFO - Processing book with ID: 57325187
+[2024-10-28T10:02:00.956+0000] {logging_mixin.py:190} INFO - Processing book with ID: 7833728
+[2024-10-28T10:02:01.225+0000] {logging_mixin.py:190} INFO - Processing book with ID: 275599939
+[2024-10-28T10:02:01.494+0000] {logging_mixin.py:190} INFO - Processing book with ID: 273822788
+[2024-10-28T10:02:01.779+0000] {logging_mixin.py:190} INFO - Processing book with ID: 202879294
+[2024-10-28T10:02:02.026+0000] {logging_mixin.py:190} INFO - Processing book with ID: 3954355
+[2024-10-28T10:02:02.566+0000] {logging_mixin.py:190} INFO - Processing book with ID: 95289208
+[2024-10-28T10:02:02.791+0000] {logging_mixin.py:190} INFO - Processing book with ID: 52788072
+[2024-10-28T10:02:03.060+0000] {logging_mixin.py:190} INFO - Processing book with ID: 41556498
+[2024-10-28T10:02:03.318+0000] {logging_mixin.py:190} INFO - Processing book with ID: 194960730
+[2024-10-28T10:02:03.557+0000] {logging_mixin.py:190} INFO - Processing book with ID: 50685547
+[2024-10-28T10:02:04.057+0000] {logging_mixin.py:190} INFO - Processing book with ID: 214496616
+[2024-10-28T10:02:04.316+0000] {logging_mixin.py:190} INFO - Processing book with ID: 274566783
+[2024-10-28T10:02:04.742+0000] {logging_mixin.py:190} INFO - Processing book with ID: 43016499
+[2024-10-28T10:02:05.014+0000] {logging_mixin.py:190} INFO - Processing book with ID: 195962334
+[2024-10-28T10:02:05.279+0000] {logging_mixin.py:190} INFO - Processing book with ID: 15267827
+[2024-10-28T10:02:05.794+0000] {logging_mixin.py:190} INFO - Processing book with ID: 190335975
+[2024-10-28T10:02:06.043+0000] {logging_mixin.py:190} INFO - Processing book with ID: 262590428
+[2024-10-28T10:02:06.793+0000] {logging_mixin.py:190} INFO - Processing book with ID: 10581200
+[2024-10-28T10:02:07.046+0000] {logging_mixin.py:190} INFO - Processing book with ID: 270234757
+[2024-10-28T10:02:07.513+0000] {logging_mixin.py:190} INFO - Processing book with ID: 19792256
+[2024-10-28T10:02:07.762+0000] {logging_mixin.py:190} INFO - Processing book with ID: 37452783
+[2024-10-28T10:02:08.298+0000] {logging_mixin.py:190} INFO - Processing book with ID: 648672
+[2024-10-28T10:02:08.557+0000] {logging_mixin.py:190} INFO - Processing book with ID: 75996801
+[2024-10-28T10:02:08.798+0000] {logging_mixin.py:190} INFO - Processing book with ID: 275243125
+[2024-10-28T10:02:09.254+0000] {logging_mixin.py:190} INFO - Processing book with ID: 16284286
+[2024-10-28T10:02:09.517+0000] {logging_mixin.py:190} INFO - Processing book with ID: 168662171
+[2024-10-28T10:02:09.758+0000] {logging_mixin.py:190} INFO - Processing book with ID: 16422526
+[2024-10-28T10:02:10.003+0000] {logging_mixin.py:190} INFO - Processing book with ID: 48592472
+[2024-10-28T10:02:10.537+0000] {logging_mixin.py:190} INFO - Processing book with ID: 52329763
+[2024-10-28T10:02:10.812+0000] {logging_mixin.py:190} INFO - Processing book with ID: 3608625
+[2024-10-28T10:02:11.057+0000] {logging_mixin.py:190} INFO - Processing book with ID: 275702538
+[2024-10-28T10:02:11.374+0000] {logging_mixin.py:190} INFO - Processing book with ID: 53434797
+[2024-10-28T10:02:11.884+0000] {logging_mixin.py:190} INFO - Processing book with ID: 74021317
+[2024-10-28T10:02:12.147+0000] {logging_mixin.py:190} INFO - Processing book with ID: 3304875
+[2024-10-28T10:02:12.694+0000] {logging_mixin.py:190} INFO - Processing book with ID: 145288029
+[2024-10-28T10:02:12.941+0000] {logging_mixin.py:190} INFO - Processing book with ID: 275406600
+[2024-10-28T10:02:13.515+0000] {logging_mixin.py:190} INFO - Processing book with ID: 273844986
+[2024-10-28T10:02:13.823+0000] {logging_mixin.py:190} INFO - Processing book with ID: 271379451
+[2024-10-28T10:02:14.335+0000] {logging_mixin.py:190} INFO - Processing book with ID: 750578
+[2024-10-28T10:02:14.575+0000] {logging_mixin.py:190} INFO - Processing book with ID: 147920903
+[2024-10-28T10:02:15.185+0000] {logging_mixin.py:190} INFO - Processing book with ID: 4780917
+[2024-10-28T10:02:15.666+0000] {logging_mixin.py:190} INFO - Processing book with ID: 3639597
+[2024-10-28T10:02:16.179+0000] {logging_mixin.py:190} INFO - Processing book with ID: 52789367
+[2024-10-28T10:02:16.465+0000] {logging_mixin.py:190} INFO - Processing book with ID: 157432544
+[2024-10-28T10:02:16.717+0000] {logging_mixin.py:190} INFO - Processing book with ID: 73787185
+[2024-10-28T10:02:17.237+0000] {logging_mixin.py:190} INFO - Processing book with ID: 17336364
+[2024-10-28T10:02:17.709+0000] {logging_mixin.py:190} INFO - Processing book with ID: 271380890
+[2024-10-28T10:02:18.083+0000] {logging_mixin.py:190} INFO - Processing book with ID: 10005245
+[2024-10-28T10:02:18.568+0000] {logging_mixin.py:190} INFO - Processing book with ID: 109017985
+[2024-10-28T10:02:18.822+0000] {logging_mixin.py:190} INFO - Current Working Directory: /opt/***
+[2024-10-28T10:02:18.823+0000] {python.py:240} INFO - Done. Returned value was: None
+[2024-10-28T10:02:18.860+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2024-10-28T10:02:18.862+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=crawl_dag, task_id=run_main_function, run_id=manual__2024-10-28T10:01:49.799937+00:00, execution_date=20241028T100149, start_date=20241028T100150, end_date=20241028T100218
+[2024-10-28T10:02:18.930+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2024-10-28T10:02:18.946+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2024-10-28T10:02:18.947+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
