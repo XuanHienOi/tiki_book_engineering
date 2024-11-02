@@ -1,3 +1,5 @@
 snowflake-connector-python
 python-dotenv
 ipykernel
+apache-airflow
+pandas

@@ -1,7 +1,9 @@
 from airflow import DAG
 from airflow.operators.python import PythonOperator  # Correct import for PythonOperator in Airflow 2.10.2
 from airflow.utils.dates import days_ago
+
 from crawl.main import main  # Import the main function
+from pipelines.incrementally_pipeline import incrementally_ETL
 
 # Define the default arguments for the DAG
 default_args = {
@@ -27,10 +29,16 @@ dag = DAG(
 
 # Define the PythonOperator
 run_crawl_task = PythonOperator(
-    task_id='run_main_function',
+    task_id='crawl',
     python_callable=main,
     dag=dag,
 )
 
+run_incrementally_ETL = PythonOperator(
+    task_id='incrementally_etl',
+    python_callable=incrementally_ETL,
+    dag=dag,
+)
+
 # Set the task in the DAG
-run_crawl_task
+run_crawl_task >> run_incrementally_ETL
