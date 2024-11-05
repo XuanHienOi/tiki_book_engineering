@@ -1,5 +1,5 @@
-snowflake-connector-python
 python-dotenv
 ipykernel
 apache-airflow
 pandas
+snowflake-connector-python[pandas]

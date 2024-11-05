@@ -3,7 +3,7 @@ import os
 from snowflake.connector.pandas_tools import write_pandas
 import pandas as pd
 
-from ..warehouse.snowflake_connection import connect_to_snowflake, create_table_if_not_exists
+from dags.pipelines.warehouse.snowflake_connection import connect_to_snowflake, create_table_if_not_exists
 
 def load_data_into_snowflake(table_name, df: pd.DataFrame):
     # Ensure column names are uppercase

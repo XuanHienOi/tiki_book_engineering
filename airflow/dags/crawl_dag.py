@@ -41,4 +41,5 @@ run_incrementally_ETL = PythonOperator(
 )
 
 # Set the task in the DAG
-run_crawl_task >> run_incrementally_ETL
+run_crawl_task 
+# >> run_incrementally_ETL

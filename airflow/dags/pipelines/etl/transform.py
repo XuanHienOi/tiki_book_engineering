@@ -2,9 +2,14 @@
 import pandas as pd
 import json
 
+def format_time(df: pd.DataFrame) -> pd.DataFrame:
+    df['crawl_time'] = pd.to_datetime(df['crawl_time'])
+    df['crawl_time'] = df['crawl_time'].dt.date
+    return df
+
 def calculate_quantity_by_day(df: pd.DataFrame) -> pd.DataFrame:
     # Convert crawl_time to datetime format
-    df['crawl_time'] = pd.to_datetime(df['crawl_time']).dt.date
+    # df['crawl_time'] = pd.to_datetime(df['crawl_time']).dt.date
 
     # Sort by tiki_id and crawl_time to ensure correct order for diff
     df = df.sort_values(by=['tiki_id', 'crawl_time'])
@@ -67,7 +72,8 @@ def extract_specifications(df):
     return result_df
 
 def transform(df: pd.DataFrame):
-    qty_df = calculate_quantity_by_day(df)
+    date_formated_df = format_time(df)
+    qty_df = calculate_quantity_by_day(date_formated_df)
     authors_extracted_df = extract_authors(qty_df)
     categories_extracted_df = extract_categories(authors_extracted_df)
     specifications_extracted_df = extract_specifications(categories_extracted_df)
